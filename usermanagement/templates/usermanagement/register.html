@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-signup mt-5" method="POST">
+            {% csrf_token %}
+            <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+            {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ form.errors }}
+            </div>
+            {% endif %}
+            <label for="id_username" class="form-control-label">Username</label>
+            {{ form.username }}
+            <label for="id_password1" class="form-control-label">Password</label>
+            {{ form.password1 }}
+            <label for="id_password2" class="form-control-label">Password confirmation</label>
+            {{ form.password2 }}
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2024</p>
+        </form>
+    </div>
+</body>
+
+</html>
