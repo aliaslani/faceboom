@@ -1,0 +1,17 @@
+{
+	"django": {
+		"pythonVersion":"3.11"
+	},
+	"disks":[
+		{
+			"name":"database",
+			"mountTo":"database"
+		},
+		{
+			"name":"files",
+			"mountTo":"media"
+		}	
+	],
+	"app":"faceboom"
+}
+
